@@ -20,39 +20,40 @@ export const onRenderBody = (
             }
           )
 
-          function __plugin_google_gapi_auth_initClient() {
-            let discoveryURLs = [
-              '${discoveryURLs.join(",\n                ")}'
-            ]
-
-            let requestedScopes = [
-              'openid',
-              'profile',
-              'email',
-              '${scopes.join(",\n                ")}'
-            ]
-
-            console.debug("Intializing GAPI client...")
-            gapi.client.init({
-              apiKey: '${apiKey}',
-              discoveryDocs: discoveryURLs,
-              clientId: '${clientId}',
-              scope: requestedScopes.join(' '),
-            }).then(() => {
-              console.log('Client initialized...')
-              __plugin_google_gapi_initialized.client = true
-              __plugin_google_gapi_initialized.auth2 = true
-            }).catch((error) => {
-              console.log(error)
-            })
-          }
-
           function __plugin_google_gapi_init() {
+            function __plugin_google_gapi_auth_initClient() {
+              let discoveryURLs = [
+                '${discoveryURLs.join(",\n                ")}'
+              ]
+
+              let requestedScopes = [
+                'openid',
+                'profile',
+                'email',
+                '${scopes.join(",\n                ")}'
+              ]
+
+              console.debug("Intializing GAPI client...")
+              gapi.client.init({
+                apiKey: '${apiKey}',
+                discoveryDocs: discoveryURLs,
+                clientId: '${clientId}',
+                scope: requestedScopes.join(' '),
+              }).then(() => {
+                console.log('Client initialized...')
+                __plugin_google_gapi_initialized.client = true
+                __plugin_google_gapi_initialized.auth2 = true
+              }).catch((error) => {
+                console.log(error)
+              })
+            }
+
             console.debug("Intializing GAPI lib...")
             gapi.load('auth2:client', {
               callback: __plugin_google_gapi_auth_initClient,
               onerror: () => {console.error("gapi.load failed")},
             })
+            __plugin_google_gapi_init = undefined
           }
         `,
       }}
