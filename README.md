@@ -1,5 +1,4 @@
 # gatsby-plugin-google-gapi
-
 Gatsby plugin to add google authentication.
 
 This plugin is currently **alpha** quality. The API is subject to change. Please
@@ -18,7 +17,6 @@ yarn add gatsby-plugin-gdpr-cookies
 ```
 
 ## How to use
-
 Add the plugin to your `gatsby-config.js`:
 
 ```js
@@ -46,16 +44,13 @@ Add the plugin to your `gatsby-config.js`:
 ```
 
 ## Hooks
-
 ### useAuthStatus
-
 #### Returns
  * authed (bool?) - Indicates whether a user is logged in or not. Null if
    status isn't available because the gapi lib is still initializing.
  * userFirstName (string) - The user's first name
 
 #### Example
-
 ```js
 const Example = () => {
   const { authed, userFirstName } = useAuthStatus()
@@ -73,7 +68,15 @@ const Example = () => {
   }
 ```
 
-## Demo
 
+## Methods
+### loginUser
+Starts a Google authentication process for the site.
+
+### logoutUser
+Logs off of the Google account for the site.
+
+
+## Demo
 This plugin was originally developed by Wren Turkal for https://ymatyt.com/.
 Please check it out!
