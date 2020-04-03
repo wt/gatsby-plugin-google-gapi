@@ -68,7 +68,7 @@ const Example = () => {
   } else {
     return
       <>
-        authed ? `Hello, {userFirstName}` : `Not Logged In`
+        {authed ? `Hello, ${userFirstName}` : "Not Logged In"}
       </>
   }
 ```
