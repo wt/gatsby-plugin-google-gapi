@@ -3,6 +3,9 @@
   "description": "A Gatsbyjs plugin for the Google API.",
   "author": "Wren Turkal <wt@penguintechs.org>",
   "license": "Apache-2.0",
+  "keywords": [
+    "gatsby-plugin"
+  ],
   "repoistory": {
     "type": "git",
     "url": "https://github.com/wt/gatsby-plugin-google-gapi"

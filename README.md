@@ -72,3 +72,8 @@ const Example = () => {
       </>
   }
 ```
+
+## Demo
+
+This plugin was originally developed by Wren Turkal for https://ymatyt.com/.
+Please check it out!
