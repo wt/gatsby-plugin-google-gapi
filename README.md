@@ -2,7 +2,7 @@
 Gatsby plugin to add google authentication.
 
 This plugin is currently **alpha** quality. The API is subject to change. Please
-constribute at https://github.com/wt/gatsby-plugin-google-gapi
+constribute at https://github.com/wt/gatsby-plugin-google-gapi.
 
 ## Install
 
