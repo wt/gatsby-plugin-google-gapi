@@ -7,13 +7,13 @@ constribute at https://github.com/wt/gatsby-plugin-google-gapi
 ## Install
 
 ```shell
-npm install --save gatsby-plugin-gdpr-cookies
+npm install --save gatsby-plugin-google-gapi
 ```
 
 or
 
 ```shell
-yarn add gatsby-plugin-gdpr-cookies
+yarn add gatsby-plugin-google-gapi
 ```
 
 ## How to use
