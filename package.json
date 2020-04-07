@@ -6,7 +6,7 @@
   "keywords": [
     "gatsby-plugin"
   ],
-  "repoistory": {
+  "repository": {
     "type": "git",
     "url": "https://github.com/wt/gatsby-plugin-google-gapi"
   },
