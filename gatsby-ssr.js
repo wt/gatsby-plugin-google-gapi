@@ -33,14 +33,14 @@ export const onRenderBody = (
             function __plugin_google_gapi_init() {
               function __plugin_google_gapi_auth_initClient() {
                 let discoveryURLs = [
-                  '${discoveryURLs.join(",\n                ")}'
+                  '${discoveryURLs.join("',\n                '")}'
                 ]
 
                 let requestedScopes = [
                   'openid',
                   'profile',
                   'email',
-                  '${scopes.join(",\n                ")}'
+                  '${scopes.join("',\n                '")}'
                 ]
 
                 console.debug("Intializing GAPI client...")
